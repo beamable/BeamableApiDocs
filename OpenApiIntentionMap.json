@@ -1,0 +1,34 @@
+{
+	"/basic/accounts/search": {
+		"get": {
+			"parameters": [
+				{
+					"name": "id",
+					"intention": "accountId"
+				}
+			],
+			"request": {
+				"schema": [
+					"name": "AccountPlayerView",
+					"properties": [
+						{
+							"name": "id",
+							"intention": "accountId"
+						}
+					]
+				]
+			},
+			"response": {
+				"schema": [
+					"name": "AccountPlayerView",
+					"properties": [
+						{
+							"name": "id",
+							"intention": "accountId"
+						}
+					]
+				]
+			}
+		}
+	}	
+}
