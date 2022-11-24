@@ -1,0 +1,94 @@
+{
+  "/basic/content/manifest/public": {
+    "get": {
+      "response": {
+        "schema": [
+          {
+            "name": "ClientManifestCsvResponse",
+            "properties": [
+              {
+                "name": "type",
+                "type": "string",
+                "intention": "contentType",
+                "unique": false
+              },
+              {
+                "name": "contentId",
+                "type": "string",
+                "intention": "contentId",
+                "unique": true
+              },
+              {
+                "name": "version",
+                "type": "string",
+                "intention": "version",
+                "unique": false
+              },
+              {
+                "name": "uri",
+                "type": "string",
+                "intention": "uri",
+                "unique": false
+              },
+              {
+                "name": "tags",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "intention": "tags",
+                "unique": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "/basic/content/manifest/private": {
+    "get": {
+      "response": {
+        "schema": [
+          {
+            "name": "ClientManifestCsvResponse",
+            "properties": [
+              {
+                "name": "type",
+                "type": "string",
+                "intention": "contentType",
+                "unique": false
+              },
+              {
+                "name": "contentId",
+                "type": "string",
+                "intention": "contentId",
+                "unique": true
+              },
+              {
+                "name": "version",
+                "type": "string",
+                "intention": "version",
+                "unique": false
+              },
+              {
+                "name": "uri",
+                "type": "string",
+                "intention": "uri",
+                "unique": false
+              },
+              {
+                "name": "tags",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "intention": "tags",
+                "unique": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
