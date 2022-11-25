@@ -433,5 +433,113 @@
         }
       ]
     }
+  },
+  "/object/commerce/{objectId}": {
+    "get": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    }
+  },
+  "/object/commerce/{objectId}/offers": {
+    "get": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    }
+  },
+  "/object/commerce/{objectId}/offersAdmin": {
+    "get": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    }
+  },
+  "/object/commerce/{objectId}/listings": {
+    "get": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    }
+  },
+  "/object/commerce/{objectId}/listings/cooldown": {
+    "put": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    }
+  },
+  "/object/commerce/{objectId}/coupons": {
+    "post": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    }
+  },
+  "/object/commerce/{objectId}/coupons/count": {
+    "get": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    }
+  },
+  "/object/commerce/{objectId}/stats/update": {
+    "post": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    }
+  },
+  "/object/commerce/{objectId}/purchase": {
+    "post": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    },
+    "put": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    }
+  },
+  "/object/commerce/{objectId}/status": {
+    "delete": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    }
   }
 }
