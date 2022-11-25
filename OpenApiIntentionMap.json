@@ -1,13 +1,7 @@
 {
-  "/basic/accounts/search": {
+  "/basic/accounts/me": {
     "get": {
-      "parameters": [
-        {
-          "name": "id",
-          "intention": "accountId"
-        }
-      ],
-      "request": {
+      "response": {
         "schema": [
           {
             "name": "AccountPlayerView",
@@ -17,13 +11,263 @@
                 "intention": "accountId"
               }
             ]
-          },
+          }
+        ]
+      }
+    }
+  },
+  "/basic/accounts/me/third-party": {
+    "get": {
+      "response": {
+        "schema": [
           {
-            "name": "AccountPlayerView.TypeA",
+            "name": "AccountPlayerView",
             "properties": [
               {
-                "name": "someOtherId",
-                "intention": "playerId"
+                "name": "id",
+                "intention": "accountId"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "/basic/accounts/me/device": {
+    "get": {
+      "response": {
+        "schema": [
+          {
+            "name": "AccountPlayerView",
+            "properties": [
+              {
+                "name": "id",
+                "intention": "accountId"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "/basic/accounts/register": {
+    "post": {
+      "response": {
+        "schema": [
+          {
+            "name": "AccountPlayerView",
+            "properties": [
+              {
+                "name": "id",
+                "intention": "accountId"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "/basic/accounts/admin/admin-users": {
+    "get": {
+      "response": {
+        "schema": [
+          {
+            "name": "GetAdminsResponse.AccountPortalView",
+            "properties": [
+              {
+                "name": "id",
+                "intention": "accountId"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "/basic/accounts/find": {
+    "get": {
+      "response": {
+        "schema": [
+          {
+            "name": "Account",
+            "properties": [
+              {
+                "name": "id",
+                "intention": "accountId"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "/basic/accounts/search": {
+    "get": {
+      "response": {
+        "schema": [
+          {
+            "name": "AccountSearchResponse.Account",
+            "properties": [
+              {
+                "name": "id",
+                "intention": "accountId"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "/basic/accounts/admin/admin-user": {
+    "post": {
+      "response": {
+        "schema": [
+          {
+            "name": "AccountPortalView",
+            "properties": [
+              {
+                "name": "id",
+                "intention": "accountId"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "/basic/accounts/admin/me": {
+    "post": {
+      "response": {
+        "schema": [
+          {
+            "name": "AccountPortalView",
+            "properties": [
+              {
+                "name": "id",
+                "intention": "accountId"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "/object/accounts/{objectId}": {
+    "put": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "accountId"
+        }
+      ],
+      "response": {
+        "schema": [
+          {
+            "name": "Account",
+            "properties": [
+              {
+                "name": "id",
+                "intention": "accountId"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "/object/accounts/{objectId}/role": {
+    "put": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "accountId"
+        }
+      ],
+      "request": {
+        "schema": [
+          {
+            "name": "UpdateRole",
+            "properties": [
+              {
+                "name": "realm",
+                "intention": "pid"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "delete": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "accountId"
+        }
+      ],
+      "request": {
+        "schema": [
+          {
+            "name": "DeleteRole",
+            "properties": [
+              {
+                "name": "realm",
+                "intention": "pid"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "/object/accounts/{objectId}/available-roles": {
+    "get": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "accountId"
+        }
+      ]
+    }
+  },
+  "/object/accounts/{objectId}/role/report": {
+    "get": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "accountId"
+        }
+      ],
+      "response": {
+        "schema": [
+          {
+            "name": "Account",
+            "properties": [
+              {
+                "name": "id",
+                "intention": "accountId"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "/object/accounts/{objectId}/admin/scope": {
+    "put": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "accountId"
+        }
+      ],
+      "request": {
+        "schema": [
+          {
+            "name": "UpdateRole",
+            "properties": [
+              {
+                "name": "realm",
+                "intention": "pid"
               }
             ]
           }
@@ -32,7 +276,105 @@
       "response": {
         "schema": [
           {
-            "name": "AccountPlayerView",
+            "name": "Account",
+            "properties": [
+              {
+                "name": "id",
+                "intention": "accountId"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "delete": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "accountId"
+        }
+      ],
+      "request": {
+        "schema": [
+          {
+            "name": "DeleteRole",
+            "properties": [
+              {
+                "name": "realm",
+                "intention": "pid"
+              }
+            ]
+          }
+        ]
+      },
+      "response": {
+        "schema": [
+          {
+            "name": "Account",
+            "properties": [
+              {
+                "name": "id",
+                "intention": "accountId"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "/object/accounts/{objectId}/admin/third-party": {
+    "put": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "accountId"
+        }
+      ]
+    },
+    "delete": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "accountId"
+        }
+      ]
+    }
+  },
+  "/object/accounts/{objectId}/admin/email": {
+    "put": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "accountId"
+        }
+      ],
+      "response": {
+        "schema": [
+          {
+            "name": "Account",
+            "properties": [
+              {
+                "name": "id",
+                "intention": "accountId"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "/object/accounts/{objectId}/admin/forget": {
+    "delete": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "accountId"
+        }
+      ],
+      "response": {
+        "schema": [
+          {
+            "name": "Account",
             "properties": [
               {
                 "name": "id",
