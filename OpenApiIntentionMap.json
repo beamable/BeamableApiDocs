@@ -385,5 +385,53 @@
         ]
       }
     }
+  },
+  "/object/announcements/{objectId}": {
+    "get": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    },
+    "delete": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    }
+  },
+  "/object/announcements/{objectId}/raw": {
+    "get": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    }
+  },
+  "/object/announcements/{objectId}/read": {
+    "put": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    }
+  },
+  "/object/announcements/{objectId}/claim": {
+    "post": {
+      "parameters": [
+        {
+          "name": "objectId",
+          "intention": "gamerTag"
+        }
+      ]
+    }
   }
 }
